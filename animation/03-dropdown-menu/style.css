@@ -6,10 +6,12 @@
   font-size: 15px;
   color: rgb(247, 247, 247);
   cursor: pointer;
+
 }
 
 .menu-title {
   background-color: rgb(163, 162, 162);
+  user-select: none;
 }
 
 .dropdown-menu {
@@ -17,16 +19,64 @@
   padding: 0;
   margin: 0;
   background-color: rgb(99, 97, 97);
-
-  display: none;
+  max-height: 0;
+  transition: max-height 01s ease, visibility 1s;
+  
+  animation-name: bounce; 
+  /* animation-direction: reverse; */
+  animation-duration: 1s;
+  transform-origin: top ; 
+  /* animation-fill-mode: forwards; */
+  display: block;
+  visibility: hidden;
+  /* z-index: 0; */
 }
 
 ul.dropdown-menu li:hover {
+  transition: background 1s ease;
   background: rgb(47, 46, 46);
 }
 
 .visible {
+  /* animation-fill-mode: forwards; */
+  max-height: 700px;
+  
+  /* animation-direction: reverse; */
+  transition: max-height 1s ease;
+  transform-origin: top;
+  animation-name: bounce; 
+  animation-duration: 0.5s;
+  
+  visibility: visible;
   display: block;
+  
+  /* z-index: 1; */
 }
 
+@keyframes bounce {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+    /* display: block; */
+  }
+  
+}
+@keyframes bounce-out {
+  0%{
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0);
+    /* display: none; */
+  }
+  20%{
+    transform: scaleY(1.05);
+  }
+}
+p {
+  text-align: center;
+  z-index: 0;
+}
 

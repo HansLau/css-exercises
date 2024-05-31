@@ -26,4 +26,72 @@ body {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+
+}
+
+
+
+/* SOLUTION!? */
+body{
+  display:flex;
+  flex-direction:column;
+}
+
+.header{
+  display: flex;
+  font-size: 32px;
+  font-weight: 900 ;
+  align-items: center;
+  padding: 16px;
+}
+
+
+/* - The sidebar links are size 24px, are white, and do not have the underline text decoration.
+- The sidebar has 16px padding. */
+.sidebar{
+  font-size: 24px;
+  padding:0;
+  padding-top: 16px;
+  display: flex;
+
+}
+
+ul{
+  padding:0;
+  margin:0;
+  list-style: none;
+  }
+ul a{
+  
+  text-decoration: none;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.main{
+  display: flex;
+  flex: 1;
+}
+
+.card{
+  /* height: auto; */
+  width: 200px;
+  padding: 20px;
+  
+}
+
+.content{
+  display:flex;
+  flex-wrap:wrap;
+  flex: 1;
+
+  gap: 50px;
+  padding: 50px;
+  /* align-content:center; */
+  
 }

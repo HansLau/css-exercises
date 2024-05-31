@@ -1,0 +1,18 @@
+.first, .second{
+    font-size: x-large;
+    padding: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.first{
+    background-color: black;
+    color: white;
+
+}
+
+.second{
+    background-color: yellow;
+    color: black;
+
+}
